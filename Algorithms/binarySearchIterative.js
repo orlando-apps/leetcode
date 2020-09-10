@@ -21,3 +21,11 @@ var search = function(nums, target){
 //let nums = [-1,0,3,5,9,12]
 //console.log( search( nums, 9 ))
 console.log( search( [5], 5 ))
+
+
+// mid = start + Math.floor( (end - start)/2 );
+// initiate while loop where mid in between and includes start and end
+// check if mid is equal to target
+// check if mid is less than target, if so, set start to mid + 1
+// else set end to mid - 1
+// set mid again

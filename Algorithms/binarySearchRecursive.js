@@ -2,8 +2,8 @@
 var search = function(nums, target){
   let start = 0;
   let end = nums.length - 1;
-  let bool = recursion(nums, target, start, end)
-  return bool;
+  let idx = recursion(nums, target, start, end)
+  return idx;
 }
 
 
