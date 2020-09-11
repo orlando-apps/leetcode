@@ -20,9 +20,9 @@ var maxProduct = function(nums) {
   let result = nums[0];
 
   for (let i = 1; i < nums.length; i++ ){
-    // pick curr, if accumulated product has been bad
+    // pick curr, if accumulated product has been bad (same as kadane)
     // pick min_so_far, if combo chain has been reverted back to positive
-    // pick max_so far, if accumulated product has been steadily increasing
+    // pick max_so far, if accumulated product has been steadily increasing (same as kadane)
     curr = nums[i];
     min_so_far = min_so_far * nums[i];
     max_so_far = max_so_far * nums[i];
