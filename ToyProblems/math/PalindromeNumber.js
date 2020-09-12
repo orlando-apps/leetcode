@@ -22,7 +22,6 @@ console.log( isPalindrome(0) );
 //Space: O(1)
 //Time: O(log10(n)), we are dividing the input by 10 for every iteration
 
-
 // In order to reverse the a number,
 // 1) we pop the last digit with %
 // 2) we divide the number by 10, then math.floor to get the remaining
