@@ -12,8 +12,6 @@
  * @return {number[][]}
  */
 
-
-
 var combinationSum3 = function(k, n) {
   let result = [];
   search (k, result, n, [], 1)
