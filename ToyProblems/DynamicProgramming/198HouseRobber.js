@@ -23,11 +23,33 @@
 // 0 <= nums[i] <= 400
 
 
-
 /**
  * @param {number[]} nums
  * @return {number}
  */
+
+
+
+//top - down recusive
+var rob = function(nums) {
+  //three senarios
+  //1) n = 1, num[i]
+  //2) n = 2, max(num[i], nums[i-1]) ===> prevMax
+  //3) n = 3, max(senario(1) + nums[i], senario(2))  ==> formula
+
+  return compute (nums, nums.length -1 )
+
+};
+
+var compute = function(nums , i){
+  if (i < 0) {
+    return 0;
+  } else {
+    return Math.max( compute(nums, i - 2) + nums[i], compute(nums, i - 1));
+  }
+}
+
+
 var rob = function(nums) {
   if (!nums.length) return 0;
   const len = nums.length;
