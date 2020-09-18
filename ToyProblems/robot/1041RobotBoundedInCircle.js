@@ -33,8 +33,8 @@ var isRobotBounded = function(instructions) {
           facing -= 1;
       }
   }
-
   // 2 senarios - return back to orgin or is not facing Up @ [0,0]
+  // if is facing down, and you run it again, it go back to up.
   if (loc[0] === 0 && loc[1] === 0 ) return true;
   if (facing % 4 !== 0 ) return true;
   return false;
