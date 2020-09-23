@@ -18,8 +18,6 @@
  * @return {number[]}
  */
 
-
-
 var sequentialDigits = function(low, high){
   let results = [];
   let digits = '123456789'
@@ -41,15 +39,6 @@ var sequentialDigits = function(low, high){
 }
 
 console.log(sequentialDigits(1000,13000))
-
-
-
-
-
-
-
-
-
 
 
 
