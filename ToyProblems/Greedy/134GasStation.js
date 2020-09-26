@@ -71,22 +71,22 @@ var canCompleteCircuit = function(gas, cost) {
 
 
 //O(n^2) Time
-// var canCompleteCircuit = function(gas, cost) {
-//     let len = gas.length;
-//     let complete = true;
-//     let tank = 0;
-//     for (let i = 0; i < len; i++){
-//         tank = 0;
-//         complete = true;
-//         for (let j = 0; j <= len; j++){ // = +1 here to make sure we go back to the starting point.
-//             let station = (i + j) % len; // allows us to go back around, since we are getting a reminder of result divided by total.
-//             tank = tank + gas[station] - cost[station]
-//             if (tank < 0) {
-//                 complete = false;
-//                 break;
-//             }
-//         }
-//         if (complete) return i;
-//     }
-//     return -1
-// };
+var canCompleteCircuit = function(gas, cost) {
+    let len = gas.length;
+    let complete = true;
+    let tank = 0;
+    for (let i = 0; i < len; i++){
+        tank = 0;
+        complete = true;
+        for (let j = 0; j <= len; j++){ // = +1 here to make sure we go back to the starting point.
+            let station = (i + j) % len; // allows us to go back around, since we are getting a reminder of result divided by total.
+            tank = tank + gas[station] - cost[station]
+            if (tank < 0) {
+                complete = false;
+                break;
+            }
+        }
+        if (complete) return i;
+    }
+    return -1
+};
