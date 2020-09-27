@@ -6,3 +6,8 @@ https://omscs.gatech.edu/cs-6515-graduate-algorithms-course-videos
 unique nodes:
 dp(i) -> 1 param -> O(N)
 dp(i, j) -> 2 params -> O(N^2)
+
+
+https://atcoder.jp/contests/dp
+
+https://www.youtube.com/channel/UClnwNEngsXoIp_tgJ2jZWfw/videos
