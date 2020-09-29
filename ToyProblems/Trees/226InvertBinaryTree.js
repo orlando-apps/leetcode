@@ -30,16 +30,34 @@
  * @param {TreeNode} root
  * @return {TreeNode}
  */
+// recursive
+var invertTree = function(root) {
+  return dfs(root)
+};
+
+
+var dfs = function(node){
+   if (!node) return null;
+
+  let left = dfs(node.left);
+  let right = dfs(node.right);
+
+  node.left = right;
+  node.right = left;
+
+  return node; // this is required. Otherwise node.left = error handling return not in function, setting it to null
+}
+
 
 
 //top down
-var invertTree = function(root) {
-    var dfs = function(node){
-        if(!node) return;
-        [node.left, node.right] = [node.right, node.left];
-        dfs(node.left);
-        dfs(node.right)
-    }
-    dfs(root)
-    return root
-};
+// var invertTree = function(root) {
+//     var dfs = function(node){
+//         if(!node) return;
+//         [node.left, node.right] = [node.right, node.left];
+//         dfs(node.left);
+//         dfs(node.right)
+//     }
+//     dfs(root)
+//     return root
+// };
