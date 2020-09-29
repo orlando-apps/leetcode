@@ -39,7 +39,6 @@ var dfs = function(node, curr){
   if(!node.right && !node.left) return curr +1;
   // need  + 1 because the node.right && node.left check returns before incrementing another 1 to account for root
   //both left and right need to be are null. require to work one root and 1 leaf
-
   let left = dfs(node.left, curr + 1);
   let right =  dfs(node.right, curr + 1);
 
