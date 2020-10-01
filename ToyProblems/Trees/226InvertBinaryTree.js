@@ -39,16 +39,14 @@ var invertTree = function(root) {
 var dfs = function(node){
    if (!node) return null;
 
-  let left = dfs(node.left);
-  let right = dfs(node.right);
+  let left = dfs(node.left); // requires a return for all cases, not just null
+  let right = dfs(node.right); //requires a return for all cases
 
   node.left = right;
   node.right = left;
 
   return node; // this is required. Otherwise node.left = error handling return not in function, setting it to null
 }
-
-
 
 //top down
 // var invertTree = function(root) {
