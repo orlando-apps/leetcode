@@ -55,5 +55,5 @@ var search = function (node){
   return head //return the last node, will be  head
 }
 
-//O(n) time
-//O(n) space
+// Time complexity : O(n). Assume that nn is the list's length, the time complexity is O(n).
+// Space complexity : O(n). The extra space comes from implicit stack space due to recursion. The recursion could go up to nn levels deep.
