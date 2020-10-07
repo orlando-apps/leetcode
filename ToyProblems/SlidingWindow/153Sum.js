@@ -40,8 +40,8 @@ var threeSum = function(nums) {
       while (low < high ){
           let sum = nums[i] + nums[low] + nums[high]
           if(sum === 0){
-              result.push([nums[i], nums[low++], nums[high--]])
-              while (low < high && nums[low] == nums[low - 1] ){
+              result.push([nums[i], nums[low++], nums[high--]]) // need to change both low and high to get another value to === 0
+              while (low < high && nums[low] == nums[low - 1] ){  //skip numbers where we have seen the previous low b/c both i, low would be the same, there can only be one high that would work and we already moved high--. However high-- may be the same, so we need to further increment low to avoid duplicates
                   low++
               }
           } else if ( sum < 0){
