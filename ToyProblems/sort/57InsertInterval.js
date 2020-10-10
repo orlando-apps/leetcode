@@ -54,3 +54,4 @@ var insert = function(intervals, newInterval) {
   result.push([newFirst, newLast])
   return result;
 };
+

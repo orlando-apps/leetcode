@@ -56,3 +56,33 @@ var linkLength = function(head){
   curr.next = head
   return count
 }
+
+
+// var rotateRight = function(head, k) {
+//   if(!head) return null
+//   k %= length(head);
+//   if(k === 0) return head;
+
+//   let [slow, fast] = [head, head];
+//   while(k--) fast = fast.next;
+
+//   while(fast.next){
+//       slow = slow.next;
+//       fast = fast.next;
+//   }
+
+//   const newHead = slow.next;
+//   slow.next = null;
+//   fast.next = head;
+//   return newHead;
+
+// };
+
+// const length = (head) => {
+//   let result = 0;
+//   while(head){
+//       result++;
+//       head = head.next;
+//   }
+//   return result;
+// }
