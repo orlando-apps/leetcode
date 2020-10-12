@@ -33,7 +33,7 @@ var rightSideView = function(root) {
       let len = queue.length;
       for ( let i = 0; i < len; i++){
           let node = queue.shift(); // only add far right in each row. Remembers which one it is by the len, even though we add more nodes to queue
-          if (i === len - 1) result.push(node.val);
+          if (i === len - 1) result.push(node.val);//push only the most right of tree
           if (node.left) queue.push(node.left);
           if (node.right) queue.push(node.right);
       }
