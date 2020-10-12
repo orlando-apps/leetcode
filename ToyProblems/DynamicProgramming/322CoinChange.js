@@ -53,7 +53,7 @@ var coinChange = function(coins, amount) {
       for (let j = 0; j < coins.length; j++){
           let coin = coins[j];
           if (coin <= i){
-              let diff =  dp[i-coin]
+              //let diff =  dp[i-coin]
               //console.log({i, j, coin, diff})
               dp[i] = Math.min(dp[i], 1 + dp[i-coin]) //dp[i] === amount + 1 initial, but it would be updated as it iterates with j
                                                       //dp[i] on the next j iteration could be something else;
