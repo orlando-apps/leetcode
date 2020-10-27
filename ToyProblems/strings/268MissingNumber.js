@@ -46,6 +46,6 @@ var missingNumber = function(nums) {
       expected += i
   }
   let diff = expected - actual
-  if(diff === 0) return 0
-  return diff > 0 ? diff : i + 1
+  if(diff === 0) return 0 //if they are the same, then 0 is missing from nums
+  return diff
 };

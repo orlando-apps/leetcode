@@ -34,6 +34,7 @@ var firstMissingPositive = function(nums) {
 
   if(!containsOne) return 1 // if 1 is not present, min positive is 1.
 
+  //change all the positive idx available to negative
   for (let i = 0; i < len; i++){
     let idx = Math.abs(nums[i]) - 1 //need to abs, if we already convert to negative
                                     // -1 for zero based array
@@ -42,12 +43,16 @@ var firstMissingPositive = function(nums) {
     if (nums[idx] > 0) {
         nums[idx] = -1 * nums[idx] //make numbers that inclusive of array range to negative
     }                              // we know that if it is neg, than we can signify its okay
-  }                                  // we do not change the value, just make it negative
+  }                                  // we DO NOT change the value, just make it negative
 
+  console.log(nums)
   for (let i = 0; i < len; i++){
     let num = nums[i];
-    if(num > 0) return i + 1 //first number that is not neg is missing number
+    if(num > 0) return i + 1 //NOTE: RETURN i first number that is not neg is missing number
   }
 
   return len + 1
 };
+
+
+console.log(firstMissingPositive([1,10,11,12,13]))
