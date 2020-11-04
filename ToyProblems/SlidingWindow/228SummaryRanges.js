@@ -53,7 +53,7 @@
 var summaryRanges = function(nums) {
   let result = [];
   let [start, end] = [nums[0], nums[0]]
-  for (let i = 1; i <= nums.length; i++){ //this is always 1 behind, b/c the push is implement on the previous after finding out the + 1 is not a match. Then start and end gets updated, but is not pushed until the next loop.
+  for (let i = 1; i <= nums.length; i++){ //this is always 1 behind, b/c the push is implemented on the previous (start, end) after finding out the end + 1 is not a match. Then start and end needs to be updated, but is not pushed until the next loop.
       let num = nums[i]
       if (end + 1 === num){
           end = num
