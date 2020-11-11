@@ -33,7 +33,7 @@
  * @return {ListNode}
  */
 var insertionSortList = function(head) {
-  let dummy_head = new ListNode() //head before the actual head
+  let dummy_head = new ListNode() //head before the actual head, we will build up this linked list
   let curr = head;
   while(curr){
       let prev_pointer = dummy_head;
@@ -47,9 +47,8 @@ var insertionSortList = function(head) {
       curr.next = next_pointer;
       prev_pointer.next = curr;
       curr = temp //update and check the next linkedlist node
-
       //first loop through prev_pointer = [0, 4], next_pointer = null
-      console.log('2', prev_pointer, next_pointer)
+      //build up and insertion at the same time.
   }
   return dummy_head.next;
 };
